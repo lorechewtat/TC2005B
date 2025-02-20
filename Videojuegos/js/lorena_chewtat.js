@@ -2,20 +2,19 @@
 Example functions to practice JavaScript
 
 Lorena Estefania Chewtat Torres
-2025-02-12
+2025-02-19
 
 */
 
 "use strict";
 
-//ejercicio 1: encontrar el primer caracter no repetido en una cadena
-
+//exercise 1: find the first non-repeating character in a string
 export function firstNonRepeating(string) 
 {
     for(let i=0; i<string.length; i++ ) 
     {
         let repeated = false;
-        for(let j=0; j<string.length; j++) //compara con todos los demas caracteres
+        for(let j=0; j<string.length; j++) //compares with all the other characters 
         {
             if(string[i] == string[j] && i != j)
             {
@@ -23,7 +22,7 @@ export function firstNonRepeating(string)
                 break;
             }
         }
-        console.log(`Char: ${string[i]}, ${repeated}`); //muestra cada caracter y si esta repetido
+        console.log(`Char: ${string[i]}, ${repeated}`); //shows each character and if it is repeated
         if (!repeated)
         {
             return string[i];
@@ -35,7 +34,7 @@ export function firstNonRepeating(string)
 
 console.log(firstNonRepeating("abacddbec"));
 
-//ejercicio 2: algoritmo bubble sort
+//exercise 2: bubble sort algorithm
 
 export function bubbleSort(list)
 {
@@ -43,7 +42,7 @@ export function bubbleSort(list)
     {
         for(let j = 0; j < list.length - 1 - i; j++)
         {
-            if(list[j] > list[j+1]) //si el elemento actual es mayor que el siguiente, los intercambia de lugar
+            if(list[j] > list[j+1]) //if the current element is greater than the next one,it swaps places
             {
                 let aux = list[j];
                 list[j] = list[j+1];
@@ -56,27 +55,27 @@ export function bubbleSort(list)
 
 console.log(bubbleSort([3,4,2,6,1]));
 
-//ejercicio 3: invertir un arreglo sin modificar el original
+//exercise 3: reverses an array without modifying the original
 
 export function invertArray(list)
 {
     let newArray = [];
-    //Comienza en el ultimo indice del arreglo y va hasta el primero
+    //Starts at the last index of the array and goes to the first one
     for(let i = list.length - 1; i >= 0; i--)
     {
-        newArray.push(list[i]); //agrega los elementos en orden inverso a otro arreglo
+        newArray.push(list[i]); //adds the elements in reverse order to another array
     }
     return newArray;
 }
 
 console.log(invertArray([1,2,3,4,5,6]));
 
-//invertir el arreglo original
-export function invertArrayInplace(list) //modifico el original
+//reverses the original array
+export function invertArrayInplace(list) //modifies the original
 {
     for(let i = 0; i < list.length / 2; i++)
     {
-        let j = list.length - 1 - i; //indice que apunta del final al inicio
+        let j = list.length - 1 - i; //index that points from the end to the beginning
         let aux = list[i];
         list[i] = list[j];
         list[j] = aux;
@@ -87,18 +86,18 @@ export function invertArrayInplace(list) //modifico el original
 console.log(invertArray([5,6,8,9,10]));
 console.log(invertArrayInplace([5,6,8,9,10]));
 
-//ejercicio 4: capitalizar la primera letra en una cadena
+//exercise 4: capitalizes the first letter in a string
 export function capitalize(string)
 {
     if (string == "") 
     {
-        return ""; //si esta vacio no regresa nada
+        return ""; //if it's empty returns nothing
     }
     
-    let newString = string[0].toUpperCase(); //convierte la primera letra a mayúscula
+    let newString = string[0].toUpperCase(); //converts the first letter to uppercase
     for(let i = 1; i < string.length; i++)
     {
-        if(string[i - 1] == " ") //si el caracter anterior es un espacio, convierte a mayúscula el caracter actual
+        if(string[i - 1] == " ") // if the previous character is a space, converts the current character to uppercase
         {
             newString += string[i].toUpperCase();
         }
@@ -113,14 +112,14 @@ export function capitalize(string)
 console.log(capitalize("hola como estas"));
 console.log(capitalize(""));
 
-//ejercicio 5: calcular el máximo comun divisor de dos números-> https://parzibyte.me/blog
+//exercise 5: calculates the MCD of two numbers-> https://parzibyte.me/blog
 export function mcd(a,b)
 {
-    let temporal = 0; //Para no perder b
+    let temporal = 0; //A variable to not loose b
     while (b !== 0) 
     {
         temporal = b;
-        b = a % b; //algoritmo de euclides
+        b = a % b; //euclid's algorithm
         a = temporal;
     }
     return a;
@@ -128,7 +127,7 @@ export function mcd(a,b)
 
 console.log(mcd(18,36));
 
-//ejercicio 6: convertir una cadena a hacker speak
+//exercise 6: converts a string to h4ck3r sp34k
 export function hackerSpeak(string)
 { 
     let newString = "";
@@ -164,13 +163,13 @@ export function hackerSpeak(string)
 
 console.log(hackerSpeak("JAVASCRIPT IS COOL"));
 
-//ejercicio 7: obtener los factores de un numero
+//exercise 7: get the factors of a number
 export function factorize(a)
 {
     let factores = [];
     for(let i = 1; i <= a; i++)
     {
-        if(a % i == 0) //si i es divisor, es un factor
+        if(a % i == 0) //if i is a divisor, then it's a factor
         {
             factores.push(i);
         }
@@ -180,7 +179,7 @@ export function factorize(a)
 
 console.log(factorize(12));
 
-//ejercicio 8: eliminar duplicados de un elemento
+//exercise 8: remove duplicates in an array
 export function deduplicate(array)
 {
     let newArray = [];
@@ -189,13 +188,13 @@ export function deduplicate(array)
         let duplicate = false;
         for(let j = 0; j < newArray.length; j++)
         {
-            if (array[i] == array[j]) //si el elemento esta repetido, entonces no lo agrega
+            if (array[i] == array[j]) //if the element is repeated, then it's not added
             {
                 duplicate = true;
                 break;
             }
         }
-        if (duplicate == false) //si no esta repetido lo agrega al nuevo arreglo
+        if (duplicate == false) //if it's not repeated, add it to the new arrangement
         {
             newArray.push(array[i])
         }
@@ -205,12 +204,12 @@ export function deduplicate(array)
 
 console.log(deduplicate([1, 0, 1, 1, 0, 0]));
 
-//ejercicio 9: encontrar la longitud de la cadena mas corta de un arreglo
+//exercise 9: find the length of the shortest string in an array
 export function findShortestString(array)
 { 
     let arrayLength = 0;
 
-    if(array.length == 0) //si el arreglo esta vacio, regresa 0
+    if(array.length == 0) //if the array is empty, return 0
     {
         arrayLength = 0;
     }
@@ -219,7 +218,7 @@ export function findShortestString(array)
         arrayLength = array[0].length;
         for (let i = 0; i < array.length; i++)
         {
-            if(array[i].length < arrayLength) //compara para ver que cadena es mas corta
+            if(array[i].length < arrayLength) //compares to see which chain is shorter
             {
                 arrayLength = array[i].length;
             }
@@ -231,7 +230,7 @@ export function findShortestString(array)
 console.log(findShortestString(["hola", "adios", "hasta luego", "yay"]));
 console.log(findShortestString([]));
 
-//ejercicio 10: ver si una palabra es palindromo
+//exercise 10: check if a word is palindrom
 export function isPalindrome(string)
 {
     let palindrome = true;
@@ -240,19 +239,19 @@ export function isPalindrome(string)
 
     for(let i = 0; i < string.length; i++)
     {
-        normalStringA.push(string[i]); //agrega cada letra de un string a un arreglo
+        normalStringA.push(string[i]); //adds each letter of a string to an array
     }
 
     for(let j = string.length - 1; j >= 0; j--)
     {
-        newStringA.push(string[j]); //agrega cada letra de un string pero al reves
+        newStringA.push(string[j]); //adds each letter of a string but in reverse to another array
     }
 
     for(let i = 0; i < normalStringA.length; i++)
     {
         if(normalStringA[i] != newStringA[i])
         {
-            palindrome = false; //si los elementos no son los mismos, no es palindroma
+            palindrome = false; //if the elements are not the same, then it's not palindrom
             break;
         }
     
@@ -263,15 +262,15 @@ export function isPalindrome(string)
 
 console.log(isPalindrome("anilina"));
 
-//ejercicio 11: ordenar un arreglo de cadenas (use selection sort) 
+//exercise 11: sort an array of strings (using selection sort)
 export function sortStrings(array)    
 {
     for(let i = 0; i < array.length - 1; i++)
     {
         let minimo = i;
-        for(let j = i + 1; j < array.length; j++) //busca la letra más "pequeña" en el arreglo desordenado
+        for(let j = i + 1; j < array.length; j++) // finds the "smallest" letter in the unordered array
         {
-            if (array[j] < array[minimo]) //cambia la posición si es mas pequeño que el minimo
+            if (array[j] < array[minimo]) //changes the position if it's smaller than the minimum
             {
                 minimo = j; 
             }
@@ -285,22 +284,22 @@ export function sortStrings(array)
 
 console.log(sortStrings(["bananas", "manzanas", "uvas", "aguacates", "mangos"]));
 
-//ejercicio 12: calcular la media y la moda de un arreglo
+//exercise 12: calculates the mean and mode of an array
 export function stats(array)
 {
     bubbleSort(array);
 
     let newArray = [];
     let mode = 0;
-    let media = 0;
+    let mean = 0;
     
     let maxCont = 0;
     let cont = 0;
-    let suma = 0;
+    let addition = 0;
 
     for(let i = 0; i <  array.length; i++)
     {
-        suma += array [i]; //suma todos los elementos del arreglo
+        addition += array [i]; //adds all the elements of the array
         cont = 1;
         for(let j = i + 1; j < array.length; j++)
         {
@@ -310,29 +309,29 @@ export function stats(array)
             }
         }
 
-        if(maxCont == cont) //si el contador actual es igual que el contador maximo, entonces no hay moda
+        if(maxCont == cont) //if the current counter is the same as the maximum counter, then there is no mode
         {
             mode = null;
         }
 
-        if (cont > maxCont) //si el contador actual es mayor que el contador maximo, esa es la moda
+        if (cont > maxCont) //if the current counter is greater than the maximum counter, that is the mode
         {
             maxCont = cont;
             mode = array[i];
         }
-        media = suma / array.length; //divides la suma entre el numero de elementos totales
+        mean = addition / array.length; //divides the sum by the number of total elements
     }
     
-    newArray.push(media, mode); //agrego los valores a un arreglo
+    newArray.push(mean, mode); //pushes the values to an array
     return newArray; 
 }
 
 console.log(stats([4, 4, 6, 8, 4, 4, 6, 8]));
 
-//ejercicio 13: devuelve la cadena de texto que se repita mas en un arreglo
+//exercise 13: returns the most repeated string in an array
 export function popularString(array)
 {
-    //usando la misma funcion que la moda
+    //using the same function as mode
     let mostPopular = "";
     
     let maxCont = 0;
@@ -366,38 +365,38 @@ export function popularString(array)
 
 console.log(popularString(["one", "two", "thr", "fou"]));
 
-//ejercicio 14: verifica si un número es potencia de 2
+//exercise 14: verifies if a number is a power of 2
 export function isPowerOf2(n)
 {
     if (n <= 0)
     {
-        return false; //si el numero no es positivo, regresa falso
+        return false; //if the number is not positive, then return false
     }
-    while (n % 2 == 0) //si el número es par
+    while (n % 2 == 0) //if the number is even
     {
-        n /= 2; //divide el número por 2 en cada iteración
+        n /= 2; //divides the number by 2 in each iteration
     }
-    return n == 1; //si despues de dividirlo varias veces, devuelve 1, entonces si es potencia
+    return n == 1; //if after dividing it several times, it returns 1, then if is a power of 2
 }
 
 console.log(isPowerOf2(6));
 
-//ejercicio 15: ordenar un arreglo de forma descendente (usando selection sort)
+//exercise 15: sort an array in descending order (using selection sort)
 export function sortDescending(array) 
 {
     for(let i = 0; i < array.length - 1; i++)
     {
-        let maximo = i;
+        let max = i;
         for(let j = i + 1; j < array.length; j++) 
         {
-            if (array[j] > array[maximo]) //cambia la posición si es mas grande que el maximo
+            if (array[j] > array[max]) //changes the position if it is larger than the maximum
             {
-                maximo = j; 
+                max = j; 
             }
         }
         let aux = array[i];
-        array[i] = array[maximo];
-        array[maximo] = aux;
+        array[i] = array[max];
+        array[max] = aux;
     }
     return array;
 }
