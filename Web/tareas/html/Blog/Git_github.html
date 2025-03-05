@@ -1,0 +1,145 @@
+<!--
+    Página que habla sobre Git y Github.
+    Lorena Estefanía Chewtat Torres
+    2025-02-25
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "../../css/Blog/blog_css.css">
+    <title>Github y git</title>
+</head>
+
+<body>
+    <header class="header-git">
+        <h1>Flujo de comando de Git y Github</h1>
+        <nav><!--contiene enlaces de navegación-->
+            <a href = "Pagina_principal.html">Página principal</a>
+            <a href = "Git_github.html">Flujo de trabajo de Git y Github</a>
+            <a href = "Terminal.html">Comandos de terminal</a>
+            <a href = "Css.html">CSS</a>
+        </nav>
+    </header>
+
+    <div class="git">
+        <h2>¿Qué es Git?</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdd25hyNQOMs4Xx1Cv_A_oaT0zagfSWlXMBA&s" alt="Git">
+    </div> 
+    
+    <div class="text">
+    <p>Se trata de un sistema de control de versiones distribuido. Esto significa que cualquier desarrollador del equipo que tenga acceso 
+        puede gestionar el código fuente y su historial de cambios utilizando las herramientas de línea de comandos de Git.
+        <br>
+        <br>
+        A diferencia de los sistemas de control de versiones centralizados, Git ofrece ramas de características. Esto significa que cada 
+        ingeniero de software en el equipo puede dividir una rama de características que proporcionará un repositorio local aislado para hacer 
+        cambios en el código.</p>
+    </div>
+
+    <div class="github">
+    <h2>¿Qué es Github? </h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PpcahB_qopQ-45P_tA1MjWGzjZnQSo8Gsg&s" alt="Github">
+    </div>
+
+    <div class="text">
+    <p>GitHub es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git. Éste permite a los desarrolladores 
+        colaborar y realizar cambios en proyectos compartidos, a la vez que mantienen un seguimiento detallado de su progreso.</p>
+    </div>  
+    
+    <div class = "titulos">
+        <h2>Flujo de comandos</h2>
+    </div>
+    
+    <br>
+    <table> <!--border para que aparezca un margen de la tabla-->
+       <tr> <!--tr sirve para hacer filas-->
+            <th><h3>Comando</h3></th> <!--celda de encabezado-->
+            <th><h3>Descripción</h3></th>
+       </tr>
+
+       <tr>
+            <td><strong>Git clone<strong></td> <!--celda de datos-->
+            <td>Sirve para clonar un repositorio de Github, es decir, descarga todo el repositorio y su historial de versiones.</td> 
+       </tr> 
+            <td><strong>Git fetch -a<strong></td>
+            <td>Sirve para descargar todos los cambios que han habido en el repositorio remoto, pero no se aplica al código.</td> 
+       <tr>
+        
+        <tr>
+            <td><strong>Git pull<strong></td>
+            <td>Sirve para descargar y fusionar los cambios remotos con tu código local. </td> 
+        </tr>
+
+        <tr>
+            <td><strong>Git checkout -b "nombre de la rama" <strong></td>
+            <td>Sirve para crear una nueva rama y cambia automáticamente a esta.</td> 
+        </tr>
+
+        <tr>
+            <td><strong>Git add <strong></td>
+            <td>Sirve para agregar los archivos que hayas modificado a tu branch
+                <ul>
+                    <li>-A: añade todos los cambios que se hayan hecho, en cualquier parte del repositorio.</li>
+                    <li> . : añade todos los cambios que hayas hecho, en tu directorio actual.</li>
+                    <li> "nombre del archivo": añade todos los cambios que hayas hecho en un archivo en especifico.</li>
+                </ul>
+            </td> 
+        </tr>
+
+        <tr>
+            <td><strong>Git commit -m "mensaje" <strong></td>
+            <td>Sirve para guardar los cambios en tu repositorio local, el mensaje tiene que tener una breve descripción de tus cambios. </td> 
+        </tr>
+
+        <tr>
+            <td><strong>Git push -u origin "nombre de la rama" <strong></td>
+            <td>Sirve para subir los cambios que hiciste en una rama de tu repositorio local al repositorio remoto.</td> 
+        </tr>
+
+        <tr>
+            <td><strong>Git pull origin main <strong></td>
+            <td>Después de cambiar de rama, sirve para asegurarnos que tienes todos los cambios en la rama. </td> 
+        </tr>
+
+        <tr>
+            <td><strong>Git merge "nombre de la rama" <strong></td>
+            <td>Sirve para unir el contenido de otra rama a la rama en la que tu estas actualmente. </td> 
+        </tr>
+   
+    </table>
+
+   <br>
+   
+   <div class="text">
+    <h3>Otros comandos útiles</h3> <!--no tienen un orden en especifico-->
+        <ul>
+            <li><strong>Git status: </strong>Sirve para mostrar el estado actual del repositorio. Indica cuales archivos han cambiado, cuales están en staging, etc.</li>
+            <li><strong>Git log: </strong>Sirve para mostrar el historial del repositorio.</li>
+            <li><strong>Git restore: </strong>Sirve para deshacer cambios en los archivos antes de hacer un commit.</li>
+            <li><strong>Git switch "nombre de la rama": </strong>Sirve para cambiar entre ramas.</li>
+        </ul>
+
+        <h5>Más comandos: <a href = "https://docs.github.com/en/get-started/learning-about-github/github-glossary">Glosario</a></h5>
+   </div>
+   
+
+   
+
+   <div class = "meme">
+        <p>Meme de la página</p>
+        <img src="https://i.redd.it/yzen2uo7qy151.jpg" alt="Meme Github">
+   </div>
+   
+
+   <footer>
+    <p>TC2005 Lore Chewtat Copyright &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
+
+
+

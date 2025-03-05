@@ -1,0 +1,295 @@
+<!--
+    Página que habla sobre CSS
+    Lorena Estefanía Chewtat Torres
+    2025-03-05
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "../../css/Blog/blog_css.css">
+    <title>CSS</title>
+</head>
+
+<body>
+    <header class="header-CSS">
+        <h1>CSS</h1> 
+        <nav><!--contiene enlaces de navegación-->
+            <a href = "Pagina_principal.html">Página principal</a>
+            <a href = "Git_github.html">Flujo de trabajo de Git y Github</a>
+            <a href = "Terminal.html">Comandos de terminal</a>
+            <a href = "Css.html">CSS</a>
+        </nav>
+    </header>
+
+    <div class="CSS">
+    <h2>¿Qué es CSS?</h2>
+    <img src="../../images/css.png" alt="Css">
+    </div>
+
+    <div class = "text">
+        <p>En una página web se escribe código HTML, con el que se que crea el contenido de una web. 
+            Por otro lado, existe el código CSS, que unido al código HTML permite darle forma, color, posición (y otras características visuales) 
+            a un documento web.
+            <br>
+            <br>
+            Las siglas CSS (Cascading Style Sheets) significan «Hojas de estilo en cascada». Se le denomina estilos en cascada porque se lee, 
+            procesa y aplica el código desde arriba hacia abajo y parten de un concepto simple pero muy potente: aplicar estilos 
+            (colores, formas, márgenes, etc...) a uno o varios documentos (generalmente documentos HTML, páginas webs) de forma automática y masiva.</p>
+    </div>
+
+    <div class="titulos">
+        <h2>¿Por qué usar CSS? </h2>
+    </div>
+        
+    <div class=" text">
+    <p>La idea de CSS es la de utilizar el concepto de separación de presentación y contenido. Este concepto se basa en que, como programadores, 
+        lo ideal es separar claramente el código que escribimos. ¿Por qué? Porque con el tiempo, esto hará que el código sea más fácil de modificar
+        y mantener. </p>
+
+        La idea es la siguiente:
+        <br>
+        <ul>
+            <li>Los documentos HTML (contenido) incluirán sólo información y datos, todo lo relativo a la información a transmitir.</li>
+            <li>Los documentos CSS (presentación) inclurán sólo los aspectos relacionados con el estilo (diseño, colores, formas, etc).</li>
+        </ul>
+
+    </div>
+        
+    <div class="titulos">
+        <h2>¿Cómo enlazar un documento CSS a un HTML? </h2>
+    </div>
+    
+    <div class="text">
+        <p>Para enlazar un documento CSS solo necesitas poner <code>&lt;link rel="stylesheet" href="nombre_archivo_css"&gt;</code> en la sección head del archivo HTML</p>
+    </div>
+
+    <div class = "titulos">
+        <h2>Selectores </h2>
+    </div>
+    
+    <div class="text">
+        <p>En CSS los selectores se utilizan para delimitar los elementos HTML de nuestra página web a los que queremos aplicar estilo. Hay una amplia variedad 
+            de selectores CSS, lo que permite una gran precisión a la hora de seleccionar elementos a los que aplicar estilo. 
+        </p>
+        <p>Un selector es un patrón de elementos y otros términos que indican al navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye 
+            los valores de las propiedades CSS. El elemento o los elementos seleccionados por el selector se denominan <i>sujeto del selector</i>.</p>
+    </div>
+    
+    <div id="selector">
+        <img src="../../images/selector.png" alt="Selector">
+    </div>
+
+    <div class="titulos">
+        <h2>Tipos de selectores</h2>
+    </div>
+
+    <div class="text">
+        <h3>Selector universal</h3>
+        <p>Es útil cuando deseas aplicar un estilo a todos los elementos en una página web sin excepción.</p>
+        <ul>
+            <li>Sintaxis: *{atributo:valor;} </li>
+            <li>Ejemplo: <code>&lt;* { color: grey; }"&gt;</code></li> 
+        </ul>
+
+        <h3>Selector de tipo</h3>
+        <p>Selecciona todos los elementos que coincidan con el nombre de la etiqueta HTML.</p>
+        <ul>
+            <li>Sintaxis: etiqueta { atributo:valor } </li>
+            <li>Ejemplo: <code>&lt;p {color: green;}"&gt;</code></li> 
+        </ul>
+        
+        <h3>Selector de clase</h3>
+        <p>Selecciona todos los elementos que coincidan con las etiquetas HTML que contengan el atributo class</p>
+        <ul>
+            <li>Sintaxis: .clase { atributo:valor } </li>
+            <li>Ejemplo: <code>&lt;.blend{color: red;}"&gt;</code></li> 
+        </ul>
+        
+        <h3>Selector de id</h3>
+        <p>El selector identificador utiliza el atributo id para seleccionar un elemento. Solo puede haber un elemento con un id dado en un documento.</p>
+        <ul>
+            <li>Sintaxis:#id { atributo:valor } </li>
+            <li>Ejemplo: <code>#cent {color: blue;}"&gt;</code></li> 
+        </ul>
+
+    </div>
+    
+
+    <div class="titulos">
+        <h2>Propiedades de CSS</h2>
+    </div>
+    
+    <div class="text">
+        <p>Las propiedades son los valores que se les pueden asignar a los elementos de la página para modificar su apariencia. Algunas propiedades son:</p>
+    </div>
+
+    <div>
+        <table> <!--border para que aparezca un margen de la tabla-->
+            <tr> <!--tr sirve para hacer filas-->
+                 <th><h3>Propiedad</h3></th> <!--celda de encabezado-->
+                 <th><h3>Descripción</h3></th>
+                 <th><h3>Ejemplo</h3></th>
+            </tr>
+     
+            <tr>
+                 <td><strong>border<strong></td> <!--celda de datos-->
+                 <td>Borde alrededor de un elemento.</td> 
+                 <td>border: 2px solid black;</td> 
+            </tr> 
+                 <td><strong>border-<strong>
+                     <ul>
+                         <li>left</li>
+                         <li>right</li>
+                         <li>top</li>
+                         <li>bottom</li>
+                     </ul>
+                 </td>
+                 <td>Controlan el borde de cada lado del elemento.</td> 
+                 <td>
+                     <ul>
+                         <li>border-left: 5px dotted red;</li>
+                         <li>border-right: 5px dotted blue;</li>
+                         <li>border-top: 3px solid red;</li>
+                         <li>border-bottom: 3px solid blue;</li>
+                     </ul>
+                 </td>
+            <tr>
+             
+             <tr>
+                 <td><strong>border-radius<strong></td>
+                 <td>Redondea las esquinas de un elemento.</td> 
+                 <td>border-radius: 10px;</td> 
+             </tr>
+     
+             <tr>
+                 <td><strong>background-image<strong></td>
+                 <td>Imagen de fondo para un elemento.</td>
+                 <td>background-image: url("fondo.png");</td> 
+             </tr>
+     
+             <tr>
+                 <td><strong>color<strong></td>
+                 <td>Define el color del texto.</td>
+                 <td>color: blue;</td>  
+             </tr>
+     
+             <tr>
+                 <td><strong>font<strong></td>
+                 <td>Define varias propiedades del texto.</td> 
+                 <td>font: bold 16px Arial;</td> 
+             </tr>
+     
+             <tr>
+                 <td><strong>font-family<strong></td>
+                 <td>Fuente del texto.</td> 
+                 <td>font-family: "Courier New";</td> 
+             </tr>
+     
+             <tr>
+                 <td><strong>font-style/ font-weight<strong></td>
+                 <td>Controlan el estilo y peso del texto.</td> 
+                 <td>font-style: italic; font weight: bold;</td>
+             </tr>
+     
+             <tr>
+                 <td><strong>width/ height<strong></td>
+                 <td>Definen el ancho y alto de un elemento.</td> 
+                 <td>width: 200px; height:100px;</td>
+             </tr>
+     
+             <tr>
+                 <td><strong>list-style<strong></td>
+                 <td>Modifica la apariencia de listas.</td> 
+                 <td>list-style: square;</td> 
+             </tr>
+     
+             <tr>
+                 <td><strong>margin<strong></td>
+                 <td>Define el espacio exterior de un elemento.</td> 
+                 <td>margin: 20px;</td> 
+             </tr>
+     
+             <tr>
+                 <td><strong>padding<strong></td>
+                 <td>Define el espacio interno de un elemento.</td>
+                 <td>padding: 10px;</td>  
+             </tr>
+     
+             <tr>
+                 <td><strong>overflow<strong></td>
+                 <td>Controla como se muestra el contenido cuando excede el tamaño del contenedor.</td>
+                 <td>overflow: visible;</td>  
+             </tr>
+        
+         </table>
+    </div>
+    
+
+   <br>
+   
+   <div class="titulos">
+        <h2>Valores de CSS</h2> 
+   </div>
+   
+   <div class="text">
+    <p>Los valores son las especificaciones que se asignan a las propiedades para definir el estilo de un elemento. 
+        Todas las propiedades necesitan un valor para funcionar correctamente. Algunos ejemplos son:</p>
+    
+        <strong>Valores de color</strong>
+        <p>Pueden definirse con nombres, códigos hexadecimales, RGB o HSL:</p>
+        <ul>
+            <li>color: blue;</li>
+            <li>color: #ff0000;</li>
+            <li>color: rgb(255, 0, 0);</li>
+            <li>color: hsl(0, 100%, 50%);</li>
+        </ul>
+    
+        <strong>Valores numéricos</strong>
+        <p>Se utilizan en medidas como width, height, margin, etc:</p>
+        <ul>
+            <li>width: 200px;</li>
+            <li>height: 50%;</li>
+            <li>font-size: 12px;</li>
+        </ul>
+    
+        <strong>Valores de texto</strong>
+        <p>Se utilizan en propiedades relacionadas con el texto como font-family, font-weight, etc:</p>
+        <ul>
+            <li>font-family: "Arial";</li>
+            <li>font-weight: bold</li>
+            <li>font-style: itallic;</li>
+        </ul>
+    
+        <strong>Valores de tamaño</strong>
+        <p>Se utilizan en propiedades relacionadas a tamaños como font-size, margin, border, etc:</p>
+        <ul>
+            <li>font-size: 2em;</li>
+            <li>margin: 10;</li>
+            <li>border: 50px;</li>
+        </ul>
+   </div>
+   
+   <br>
+   <div class="text">
+    <h5>Más propiedades y valores:</h5>
+    <h5><a href = "https://carontestudio.com/blog/listado-de-propiedades-css/#Listado_completo_de_propiedades_CSS">Listado completo de propiedades CSS</a></h5>
+   </div>
+   
+   
+   <div class="meme">
+        <p>Meme de la página</p>
+        <img src="https://images-cdn.9gag.com/photo/aj5N3Y0_700b.jpg" alt="Meme CSS">
+   </div>
+
+   <footer>
+    <p>TC2005 Lore Chewtat Copyright &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
+
+
+

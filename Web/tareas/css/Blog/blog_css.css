@@ -1,0 +1,174 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #BF8EBC;
+    color: white;
+    text-align: justify;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top:50px;
+    font-size: 20px;
+    color: white;
+    background-size: cover;
+    
+}
+
+header nav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px; 
+}
+
+header nav a:hover{
+    background-color: #2E3C8C;
+}
+
+img{
+    width: 200px;
+}
+
+footer{
+    background-color: #4744A6;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.header-pagina_principal{
+    background-image: url(../../images/estrella2.gif);
+    background-repeat: no-repeat;
+    
+}
+
+.header-git{
+    background-image: url(../../images/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif);
+}
+
+.header-terminal{
+    background-image: url(../../images/terminal2.gif);
+}
+
+.header-CSS{
+    background-image: url(../../images/backgroundaes2.gif);
+}
+
+.descripcion img{
+    width: 150px;
+}
+
+.git, .github, .terminal, .CSS{
+    text-align: center;
+    padding: 1px;
+}
+
+.git h2, .github h2, .terminal h2, .CSS h2{
+    
+    text-align: center;
+    background-color: #2E3C8C;
+    padding: 1px;
+}
+
+.titulos h2{
+    margin: 0px;
+    text-align: center;
+    background-color: #2E3C8C;
+    padding: 1px;
+}
+
+.text{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.text h3, .text strong{
+    font-weight: bold;
+    color:#2E3C8C
+}
+
+.descripcion 
+{
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+div #meme-git{
+    margin-right: 50px;
+}
+
+.meme{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    margin-left: 550px;
+    margin-right: 550px;
+    border-top: 5px #2E3C8C solid ;
+    border-bottom: 5px #2E3C8C solid ;
+    border-left: 5px #2E3C8C solid ;
+    border-right: 5px #2E3C8C solid ;
+    border-radius: 2%;
+    background-color: #ffffff;
+}
+
+.meme p{
+    font-size: 17px;
+    font-style: italic;
+    margin-right: 30px;
+    margin-left: 20px;
+    color: #4744A6;
+}
+
+#selector{
+    text-align: center;
+}
+
+table{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-collapse: collapse; 
+    border: 2px dotted #ffffff;
+    overflow: auto; 
+}
+
+table th, table td {
+    border: 2px dotted #ffffff;
+    padding: 5px;
+    overflow: auto; 
+}
+
+table th {
+    background-color: #2E3C8C;
+    text-align: center;
+}
+
+table td {
+    background-color: #2e3c8c42;
+}
+
+ul{
+    list-style: square;
+    list-style: inside;
+}

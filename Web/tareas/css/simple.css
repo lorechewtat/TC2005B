@@ -1,0 +1,79 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header{
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-between; /*hacia lo horizontal*/
+    align-content: center;
+    background-color: #3c4656;
+
+}
+
+header nav{
+    margin: 10px;
+    padding: 15px 20px;
+    justify-content: space-between;
+    font-size: 12px;
+
+}
+
+
+
+#titleSection{
+    padding: 50px 50px;
+    text-align: center;
+    background-color: #e68b4a;
+    align-items: center;
+    justify-content: center;
+}
+
+#titleSection p{
+    text-align: justify;
+    font-size: 14px;
+}
+
+#subscribeSection {
+    background-color: #465162;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+#subscribeSection form{
+    margin : 18px;
+}
+
+#imageSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 50px 0px;
+    color: black;
+}
+
+img{
+    width: 5rem;;
+}
+
+footer{
+    background-color: #465162;
+    padding: 10px 10px;
+    font-size: 12px;
+    text-align: center;
+}
