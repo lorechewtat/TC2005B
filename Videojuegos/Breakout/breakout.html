@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breakout</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="game_classes.js"></script>
+        <script src="breakout.js"></script>
+    </head>
+
+    <body>
+        <div id="headerContainer">
+            <h1>BREAKOUT</h1>
+        </div>
+
+
+        <div id = "gameContainer">
+
+            <div id="scoreLivesContainer">
+                <div id = "score">
+                    <p id="scoreValue">Score:</p>
+                </div>
+
+                <div id = "lives">
+                    <p id="livesValue">Lives:</p>
+                </div>
+            </div>
+
+            <canvas id="canvas"></canvas>
+
+            <div id="looseValue" style="display: none;">GAME OVER</div> 
+            <div id="winValue" style="display: none;">YOU WIN!!</div> 
+            
+        </div>
+
+        
+        <script> main(); </script>
+
+        <a href="/">
+            <button id="backButton">Back</button>
+        </a>
+    </body>
+</html>
