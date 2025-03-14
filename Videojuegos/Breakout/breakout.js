@@ -275,6 +275,7 @@ function drawScene(newTime) {
     if (boxOverlap(box,leftGoal) || boxOverlap(box,rightGoal))
     {
         box.velocity.x *= -1;
+
     }
     
     if (boxOverlap(box, topBar) || boxOverlap(box, paddle))

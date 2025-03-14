@@ -1,0 +1,38 @@
+body{
+    background-color: gray;
+    height: 100vh; /*viewport height, viewport = tamaño que se esta viendo en el navegador web*/
+}
+
+.gridClass{
+    background-color: cyan;
+    padding: 10px;
+    border: 3px solid white;
+}
+
+.gridContainer{
+
+    /*height: 100%; no va a hacer nada por si solo, tienes q ponerl el height arriba pq es el 100% del body, y el body no ocupa toda la pantalla*/
+    height: calc(100% - 16px); /*para q no se salga de la pantalla, 16px es el padding de body*/ 
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* fr es unidades flexibles, puedes poner repeat si son todos los mismos fr*/
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+
+    gap: 10px; /*gap: arriba derecha abajo izquierda*/
+
+    grid-template-areas:
+        "header header ." /*el punto es q puede ser lo q quieras despues, 2 headers 2 espacios de columna*/
+       /*  ". main ."
+        ". main ."
+        ". main ."
+        ". . ." */
+}
+
+#grid-item-1{
+    grid-area: header;
+}
+
+#grid-item-2{
+    grid-row: 2 /5; /*de la linea 2 a la 5*/ /* le puedes poner tmb 2/ span 3 si quiero que se pongan 3 filas y no se q linea es*/
+    grid-column: 2;
+}
