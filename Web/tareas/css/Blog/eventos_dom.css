@@ -1,0 +1,159 @@
+/* ==========================
+   Estilos Complementarios
+   Todo este código fue hecho por ChatGPT
+   ========================== */
+
+/* 🎨 1️⃣ Mejoras en la paleta de colores */
+:root {
+    --primary-color: #BF8EBC;  /* Color base */
+    --secondary-color: #2E3C8C;
+    --accent-color: #4744A6;
+    --text-color: white;
+    --background-gradient: linear-gradient(135deg, #BF8EBC, #2E3C8C);
+}
+
+/* 🌟 2️⃣ Fondo con degradado para una apariencia más elegante */
+body {
+    background: var(--background-gradient);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 🎭 3️⃣ Estilos mejorados para encabezados */
+h2 {
+    text-align: center;
+    padding: 10px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔗 4️⃣ Efectos visuales en los enlaces del menú */
+header nav a {
+    font-size: 20px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+/* 🖼️ 5️⃣ Bordes redondeados y sombras sutiles en imágenes */
+img {
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* 📜 6️⃣ Estilos para tablas */
+table {
+    max-width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+table th {
+    background: var(--secondary-color);
+}
+
+table td {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 📌 7️⃣ Botones mejorados */
+button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* 📱 8️⃣ Mejoras para móviles */
+@media (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+
+    .text {
+        padding: 20px;
+    }
+
+    .descripcion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meme {
+        margin: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* 🎯 9️⃣ Footer mejorado con un efecto visual */
+footer {
+    background: var(--accent-color);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.container{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+table, td{
+    border: 1px solid black;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: square; /* Marcadores en forma de cuadro */
+}
+
+ol {
+    list-style-type: decimal; /* Numeración estándar */
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}

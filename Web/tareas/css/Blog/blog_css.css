@@ -69,6 +69,10 @@ footer{
     background-image: url(../../images/backgroundaes2.gif);
 }
 
+.header-DOM{
+    background-image: url(../../images/ai.gif);
+}
+
 .descripcion img{
     width: 150px;
 }
